@@ -1,12 +1,12 @@
 window.addEventListener("load", init);
 
 const kutyaLista=[
-    {fajta:"Dézi", kor: "12", fajta: "foxterrier"},
-    {fajta:"Prézli", kor: "2", fajta: "kuvasz"},
-    {fajta:"Gombi", kor: "2", fajta: "puli"},
-    {fajta:"Centi", kor: "8", fajta: "agár"},
-    {fajta:"Mamut", kor: "9", fajta: "újfullandi"},
-    {fajta:"Picúr", kor: "1", fajta: "keverék"}]
+    {név:"Dézi", kor: "12", fajta: "foxterrier"},
+    {név:"Prézli", kor: "2", fajta: "kuvasz"},
+    {név:"Gombi", kor: "2", fajta: "puli"},
+    {név:"Centi", kor: "8", fajta: "agár"},
+    {név:"Mamut", kor: "9", fajta: "újfullandi"},
+    {név:"Picúr", kor: "1", fajta: "keverék"}]
 
 
 function init(){
@@ -22,7 +22,8 @@ function osszeallit(){
     //összaállítjuk azt a szöveges tartlamat, ami a HTML kódot jelenti
     let txt =""
     for (let index = 0; index < kutyaLista.length; index++) {
-        txt += `<div>`
+        
+        txt += `<div> <button>Törlés</button>`              
                    
                     for (const kulcs in kutyaLista[index]){ 
                         txt += `  <p>
